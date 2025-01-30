@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/__init__.py
+src/inference/__init__.py
+src/inference/segmentation.py
+src/ros/__init__.py
+src/ros/depth_node.py
+src/ros/yolo_node.py
+src/utils/__init__.py
+src/utils/pareto.py
+src/utils/visualization.py
+yolov8_segmentation_rex.egg-info/PKG-INFO
+yolov8_segmentation_rex.egg-info/SOURCES.txt
+yolov8_segmentation_rex.egg-info/dependency_links.txt
+yolov8_segmentation_rex.egg-info/requires.txt
+yolov8_segmentation_rex.egg-info/top_level.txt

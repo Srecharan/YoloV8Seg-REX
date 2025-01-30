@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: yolov8-segmentation-rex
+Version: 0.1.0
+Summary: YOLOv8-based leaf segmentation package
+Author: Your Name
+Requires-Python: >=3.8
+License-File: LICENSE

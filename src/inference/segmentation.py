@@ -10,7 +10,7 @@ import cv2
 import torch
 from ultralytics import YOLO
 from typing import Union, Tuple, List, Dict
-
+import matplotlib.pyplot as plt
 class LeafSegmentation:
     """A class for performing leaf segmentation using YOLOv8."""
     
@@ -136,53 +136,86 @@ class LeafSegmentation:
         }
     
     def _visualize_masks(self, 
-                        image: np.ndarray, 
-                        masks: np.ndarray,
-                        scores: np.ndarray) -> np.ndarray:
+                    image: np.ndarray, 
+                    masks: np.ndarray,
+                    scores: np.ndarray) -> np.ndarray:
         """
-        Create visualization of the segmentation results.
-        
-        Args:
-            image: Original image
-            masks: Binary masks from segmentation
-            scores: Confidence scores
-            
-        Returns:
-            np.ndarray: Visualization image
+        Create enhanced visualization of the segmentation results.
         """
         viz_image = image.copy()
+        height, width = image.shape[:2]
         
-        # Create random colors for each mask
-        colors = np.random.randint(0, 255, size=(len(masks), 3))
+        # Create distinct colors for each mask
+        num_masks = len(masks)
+        hsv_colors = np.linspace(0, 1, num_masks)
+        colors = []
+        for h in hsv_colors:
+            # Convert HSV to RGB for more distinct colors
+            rgb = plt.cm.hsv(h)[:3]
+            # Make colors more vibrant
+            rgb = [int(c * 255) for c in rgb]
+            colors.append(rgb)
         
-        # Apply each mask
-        for idx, (mask, score) in enumerate(zip(masks, scores)):
-            color = colors[idx]
-            
+        # Create transparent overlay
+        overlay = np.zeros_like(image)
+        label_positions = []
+        
+        # Apply each mask with enhanced visibility
+        for idx, (mask, score, color) in enumerate(zip(masks, scores, colors)):
             # Resize mask to image size
             mask = cv2.resize(
                 mask.astype(float),
-                (image.shape[1], image.shape[0]),
+                (width, height),
                 interpolation=cv2.INTER_NEAREST
             )
             
-            # Apply colored mask
-            viz_image = np.where(
-                mask[..., None],
-                viz_image * 0.5 + color * 0.5,
-                viz_image
-            ).astype(np.uint8)
+            # Find contours for label placement
+            mask_binary = mask.astype(np.uint8)
+            contours, _ = cv2.findContours(mask_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
             
-            # Add score text
-            y_pos = 30 + idx * 30
-            cv2.putText(
-                viz_image,
-                f"Leaf {idx+1}: {score:.2f}",
-                (10, y_pos),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                1,
-                color.tolist(),
-                2
-            )
+            if contours:
+                # Find centroid of largest contour
+                largest_contour = max(contours, key=cv2.contourArea)
+                M = cv2.moments(largest_contour)
+                if M["m00"] != 0:
+                    cx = int(M["m10"] / M["m00"])
+                    cy = int(M["m01"] / M["m00"])
+                    label_positions.append((cx, cy))
+                else:
+                    label_positions.append((10, 30 + idx * 30))
+            else:
+                label_positions.append((10, 30 + idx * 30))
+            
+            # Apply colored mask with higher opacity
+            overlay = np.where(
+                mask[..., None],
+                color,
+                overlay
+            ).astype(np.uint8)
+        
+        # Blend original image with overlay
+        alpha = 0.4  # Opacity of the overlay
+        viz_image = cv2.addWeighted(viz_image, 1, overlay, alpha, 0)
+        
+        # Add labels and scores at centroid positions
+        for idx, (pos_x, pos_y) in enumerate(label_positions):
+            label = f"Leaf {idx+1}: {scores[idx]:.2f}"
+            
+            # Add white background for text
+            (text_w, text_h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2)
+            cv2.rectangle(viz_image, 
+                        (pos_x - 5, pos_y - text_h - 5),
+                        (pos_x + text_w + 5, pos_y + 5),
+                        (255, 255, 255),
+                        -1)
+            
+            # Add text
+            cv2.putText(viz_image,
+                    label,
+                    (pos_x, pos_y),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.7,
+                    colors[idx],
+                    2)
         
         return viz_image
