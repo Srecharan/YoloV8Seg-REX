@@ -1,0 +1,25 @@
+name: yolo-v8
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - pip>=23.1.2
+  - numpy>=1.25.1
+  - pytorch>=2.0.1
+  - torchvision>=0.15.2
+  - cudatoolkit=11.7
+  - matplotlib>=3.7.2
+  - scikit-learn>=1.3.0
+  - scipy>=1.11.1
+  - pandas>=2.0.3
+  - pip:
+    - ultralytics>=8.0.137
+    - opencv-python>=4.8.0
+    - pillow>=10.0.0
+    - scikit-image>=0.22.0
+    - tqdm>=4.65.0
+    - pyyaml>=6.0.1
+    - seaborn>=0.12.2
+    - paretoset>=1.2.3

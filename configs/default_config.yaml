@@ -1,0 +1,8 @@
+model:
+  path: "large_best.pt"
+  conf_threshold: 0.7
+  iou_threshold: 0.2
+  input_size:
+    width: 1440
+    height: 1080
+  device: 0
