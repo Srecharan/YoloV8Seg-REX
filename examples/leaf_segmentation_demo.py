@@ -47,17 +47,33 @@ def process_image(segmenter, img_path, output_dir=None):
         image = cv2.imread(img_path)
         if image is None:
             raise ValueError(f"Failed to read image: {img_path}")
-            
-        # Perform segmentation
-        results = segmenter.segment_image(image, visualize=True)
         
-        # Create output directory if needed
+        # Create output path if directory is specified
         if output_dir:
             os.makedirs(output_dir, exist_ok=True)
             save_path = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(img_path))[0]}_results.png")
         else:
             save_path = None
             
+        # Perform segmentation
+        results = segmenter.segment_image(
+            image, 
+            visualize=True,
+            output_json=True,
+            output_path=save_path
+        )
+        
+        # Print leaf statistics
+        if results.get('leaf_stats'):
+            print("\nLeaf Statistics:")
+            for stat in results['leaf_stats']:
+                print(f"\nLeaf {stat['leaf_id']}:")
+                print(f"  Area: {stat['area_pixels']:.1f} pixels")
+                print(f"  Perimeter: {stat['perimeter_pixels']:.1f} pixels")
+                print(f"  Aspect Ratio: {stat['aspect_ratio']:.2f}")
+                print(f"  Circularity: {stat['circularity']:.2f}")
+                print(f"  Centroid: {stat['centroid']}")
+        
         # Show results
         print(f"Found {len(results['masks'])} leaves")
         if len(results['masks']) > 0:

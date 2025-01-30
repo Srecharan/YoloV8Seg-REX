@@ -69,7 +69,9 @@ class LeafSegmentation:
     
     def segment_image(self, 
                      image: Union[str, np.ndarray],
-                     visualize: bool = False) -> Dict:
+                     visualize: bool = False,
+                     output_json: bool = False,
+                     output_path: str = None) -> Dict:
         """
         Perform leaf segmentation on an input image.
         
@@ -107,8 +109,8 @@ class LeafSegmentation:
                 'visualization': image if visualize else None
             }
         
-        # Get masks
         masks = results.masks.data.cpu().numpy()
+        scores = results.boxes.conf.cpu().numpy()
         
         # Create aggregated mask
         height, width = image.shape[:2]
@@ -126,15 +128,124 @@ class LeafSegmentation:
         # Prepare visualization if requested
         viz_image = None
         if visualize:
-            viz_image = self._visualize_masks(image, masks, results.boxes.conf.cpu().numpy())
+            viz_image = self._visualize_masks(image, masks, scores)
+        
+        # Calculate leaf statistics
+        leaf_stats = self._calculate_leaf_stats(masks, height, width)
+        
+        # Export to JSON if requested
+        if output_json:
+            self._export_to_json(leaf_stats, scores, output_path)
         
         return {
             'masks': masks,
-            'scores': results.boxes.conf.cpu().numpy(),
+            'scores': scores,
             'aggregated_mask': mask_aggregated,
-            'visualization': viz_image
+            'visualization': viz_image,
+            'leaf_stats': leaf_stats
         }
     
+    def _calculate_leaf_stats(self, masks: np.ndarray, height: int, width: int) -> List[Dict]:
+        """
+        Calculate statistics for each leaf mask.
+        
+        Args:
+            masks: Binary masks for each leaf
+            height: Image height
+            width: Image width
+            
+        Returns:
+            List of dictionaries containing stats for each leaf
+        """
+        leaf_stats = []
+        
+        for idx, mask in enumerate(masks):
+            # Resize mask to original image size
+            mask_resized = cv2.resize(
+                mask.astype(float),
+                (width, height),
+                interpolation=cv2.INTER_NEAREST
+            )
+            
+            # Convert to binary mask
+            mask_binary = mask_resized.astype(np.uint8)
+            
+            # Find contours
+            contours, _ = cv2.findContours(
+                mask_binary,
+                cv2.RETR_EXTERNAL,
+                cv2.CHAIN_APPROX_SIMPLE
+            )
+            
+            if contours:
+                # Get largest contour
+                contour = max(contours, key=cv2.contourArea)
+                
+                # Calculate statistics
+                area = cv2.contourArea(contour)
+                perimeter = cv2.arcLength(contour, True)
+                
+                # Calculate centroid
+                M = cv2.moments(contour)
+                if M["m00"] != 0:
+                    cx = int(M["m10"] / M["m00"])
+                    cy = int(M["m01"] / M["m00"])
+                else:
+                    cx, cy = 0, 0
+                
+                # Calculate bounding box
+                x, y, w, h = cv2.boundingRect(contour)
+                
+                # Store stats
+                leaf_stats.append({
+                    'leaf_id': idx + 1,
+                    'area_pixels': float(area),
+                    'perimeter_pixels': float(perimeter),
+                    'centroid': (int(cx), int(cy)),
+                    'bounding_box': {
+                        'x': int(x),
+                        'y': int(y),
+                        'width': int(w),
+                        'height': int(h)
+                    },
+                    'aspect_ratio': float(w) / h if h != 0 else 0,
+                    'circularity': 4 * np.pi * area / (perimeter * perimeter) if perimeter != 0 else 0
+                })
+            
+        return leaf_stats
+
+    def _export_to_json(self, leaf_stats: List[Dict], scores: np.ndarray, output_path: str = None):
+        """
+        Export leaf statistics to JSON file.
+        
+        Args:
+            leaf_stats: List of leaf statistics
+            scores: Confidence scores
+            output_path: Path to save JSON file
+        """
+        import json
+        from datetime import datetime
+        
+        # Add confidence scores to stats
+        for idx, stat in enumerate(leaf_stats):
+            stat['confidence_score'] = float(scores[idx])
+        
+        # Prepare export data
+        export_data = {
+            'timestamp': datetime.now().isoformat(),
+            'total_leaves': len(leaf_stats),
+            'leaves': leaf_stats
+        }
+        
+        # Save to JSON if output path is provided
+        if output_path:
+            json_path = output_path.replace('.png', '_stats.json')
+            with open(json_path, 'w') as f:
+                json.dump(export_data, f, indent=2)
+            print(f"Leaf statistics saved to: {json_path}")
+        
+        return export_data
+
     def _visualize_masks(self, 
                     image: np.ndarray, 
                     masks: np.ndarray,

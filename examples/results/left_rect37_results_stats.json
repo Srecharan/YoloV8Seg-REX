@@ -1,0 +1,816 @@
+{
+  "timestamp": "2025-01-30T18:54:28.949666",
+  "total_leaves": 45,
+  "leaves": [
+    {
+      "leaf_id": 1,
+      "area_pixels": 17819.5,
+      "perimeter_pixels": 563.4629830121994,
+      "centroid": [
+        1385,
+        102
+      ],
+      "bounding_box": {
+        "x": 1320,
+        "y": 1,
+        "width": 120,
+        "height": 196
+      },
+      "aspect_ratio": 0.6122448979591837,
+      "circularity": 0.7053011593384303,
+      "confidence_score": 0.9404832124710083
+    },
+    {
+      "leaf_id": 2,
+      "area_pixels": 9311.0,
+      "perimeter_pixels": 434.73506104946136,
+      "centroid": [
+        1126,
+        953
+      ],
+      "bounding_box": {
+        "x": 1090,
+        "y": 862,
+        "width": 73,
+        "height": 178
+      },
+      "aspect_ratio": 0.4101123595505618,
+      "circularity": 0.6190943726254731,
+      "confidence_score": 0.935599148273468
+    },
+    {
+      "leaf_id": 3,
+      "area_pixels": 20799.0,
+      "perimeter_pixels": 658.6416964530945,
+      "centroid": [
+        785,
+        706
+      ],
+      "bounding_box": {
+        "x": 716,
+        "y": 590,
+        "width": 140,
+        "height": 250
+      },
+      "aspect_ratio": 0.56,
+      "circularity": 0.6024955962481513,
+      "confidence_score": 0.930834174156189
+    },
+    {
+      "leaf_id": 4,
+      "area_pixels": 27981.0,
+      "perimeter_pixels": 757.1269779205322,
+      "centroid": [
+        154,
+        394
+      ],
+      "bounding_box": {
+        "x": 75,
+        "y": 283,
+        "width": 174,
+        "height": 260
+      },
+      "aspect_ratio": 0.6692307692307692,
+      "circularity": 0.6133885333620805,
+      "confidence_score": 0.9267453551292419
+    },
+    {
+      "leaf_id": 5,
+      "area_pixels": 22780.5,
+      "perimeter_pixels": 725.0853472948074,
+      "centroid": [
+        916,
+        380
+      ],
+      "bounding_box": {
+        "x": 848,
+        "y": 259,
+        "width": 141,
+        "height": 267
+      },
+      "aspect_ratio": 0.5280898876404494,
+      "circularity": 0.544496206346267,
+      "confidence_score": 0.9243091940879822
+    },
+    {
+      "leaf_id": 6,
+      "area_pixels": 12219.0,
+      "perimeter_pixels": 487.1614681482315,
+      "centroid": [
+        1217,
+        50
+      ],
+      "bounding_box": {
+        "x": 1128,
+        "y": 1,
+        "width": 170,
+        "height": 116
+      },
+      "aspect_ratio": 1.4655172413793103,
+      "circularity": 0.6469931275781543,
+      "confidence_score": 0.9200713634490967
+    },
+    {
+      "leaf_id": 7,
+      "area_pixels": 28431.0,
+      "perimeter_pixels": 810.3818099498749,
+      "centroid": [
+        231,
+        128
+      ],
+      "bounding_box": {
+        "x": 124,
+        "y": 18,
+        "width": 178,
+        "height": 286
+      },
+      "aspect_ratio": 0.6223776223776224,
+      "circularity": 0.5440297268239646,
+      "confidence_score": 0.9181061387062073
+    },
+    {
+      "leaf_id": 8,
+      "area_pixels": 7688.5,
+      "perimeter_pixels": 346.5512971878052,
+      "centroid": [
+        1101,
+        570
+      ],
+      "bounding_box": {
+        "x": 1061,
+        "y": 517,
+        "width": 80,
+        "height": 119
+      },
+      "aspect_ratio": 0.6722689075630253,
+      "circularity": 0.804482173656527,
+      "confidence_score": 0.9159997701644897
+    },
+    {
+      "leaf_id": 9,
+      "area_pixels": 11243.0,
+      "perimeter_pixels": 479.3868622779846,
+      "centroid": [
+        288,
+        580
+      ],
+      "bounding_box": {
+        "x": 213,
+        "y": 506,
+        "width": 145,
+        "height": 150
+      },
+      "aspect_ratio": 0.9666666666666667,
+      "circularity": 0.6147801249481286,
+      "confidence_score": 0.9155014753341675
+    },
+    {
+      "leaf_id": 10,
+      "area_pixels": 9389.5,
+      "perimeter_pixels": 425.8893892765045,
+      "centroid": [
+        969,
+        640
+      ],
+      "bounding_box": {
+        "x": 895,
+        "y": 583,
+        "width": 135,
+        "height": 118
+      },
+      "aspect_ratio": 1.1440677966101696,
+      "circularity": 0.6505170593970926,
+      "confidence_score": 0.9133644104003906
+    },
+    {
+      "leaf_id": 11,
+      "area_pixels": 41994.0,
+      "perimeter_pixels": 1066.1808013916016,
+      "centroid": [
+        799,
+        991
+      ],
+      "bounding_box": {
+        "x": 648,
+        "y": 866,
+        "width": 311,
+        "height": 210
+      },
+      "aspect_ratio": 1.480952380952381,
+      "circularity": 0.4642323404189129,
+      "confidence_score": 0.9131056070327759
+    },
+    {
+      "leaf_id": 12,
+      "area_pixels": 20544.0,
+      "perimeter_pixels": 618.0487701892853,
+      "centroid": [
+        396,
+        52
+      ],
+      "bounding_box": {
+        "x": 279,
+        "y": 1,
+        "width": 227,
+        "height": 117
+      },
+      "aspect_ratio": 1.9401709401709402,
+      "circularity": 0.6758485357695512,
+      "confidence_score": 0.9126371145248413
+    },
+    {
+      "leaf_id": 13,
+      "area_pixels": 12756.5,
+      "perimeter_pixels": 510.57568085193634,
+      "centroid": [
+        421,
+        999
+      ],
+      "bounding_box": {
+        "x": 316,
+        "y": 948,
+        "width": 202,
+        "height": 96
+      },
+      "aspect_ratio": 2.1041666666666665,
+      "circularity": 0.61492358026157,
+      "confidence_score": 0.9117525219917297
+    },
+    {
+      "leaf_id": 14,
+      "area_pixels": 27279.0,
+      "perimeter_pixels": 887.7199023962021,
+      "centroid": [
+        418,
+        767
+      ],
+      "bounding_box": {
+        "x": 330,
+        "y": 624,
+        "width": 167,
+        "height": 308
+      },
+      "aspect_ratio": 0.5422077922077922,
+      "circularity": 0.4349971347711994,
+      "confidence_score": 0.9097310304641724
+    },
+    {
+      "leaf_id": 15,
+      "area_pixels": 29825.0,
+      "perimeter_pixels": 890.2051839828491,
+      "centroid": [
+        1196,
+        368
+      ],
+      "bounding_box": {
+        "x": 1097,
+        "y": 250,
+        "width": 227,
+        "height": 231
+      },
+      "aspect_ratio": 0.9826839826839827,
+      "circularity": 0.4729443900641838,
+      "confidence_score": 0.9093402028083801
+    },
+    {
+      "leaf_id": 16,
+      "area_pixels": 16694.0,
+      "perimeter_pixels": 589.0437164306641,
+      "centroid": [
+        619,
+        748
+      ],
+      "bounding_box": {
+        "x": 537,
+        "y": 662,
+        "width": 150,
+        "height": 191
+      },
+      "aspect_ratio": 0.7853403141361257,
+      "circularity": 0.6046098498205434,
+      "confidence_score": 0.9049398899078369
+    },
+    {
+      "leaf_id": 17,
+      "area_pixels": 4929.0,
+      "perimeter_pixels": 295.2792183160782,
+      "centroid": [
+        1182,
+        191
+      ],
+      "bounding_box": {
+        "x": 1153,
+        "y": 141,
+        "width": 72,
+        "height": 101
+      },
+      "aspect_ratio": 0.7128712871287128,
+      "circularity": 0.7103999417962668,
+      "confidence_score": 0.9013314247131348
+    },
+    {
+      "leaf_id": 18,
+      "area_pixels": 19018.5,
+      "perimeter_pixels": 554.4924201965332,
+      "centroid": [
+        1361,
+        1013
+      ],
+      "bounding_box": {
+        "x": 1259,
+        "y": 949,
+        "width": 181,
+        "height": 129
+      },
+      "aspect_ratio": 1.4031007751937985,
+      "circularity": 0.7773111498222852,
+      "confidence_score": 0.8934004902839661
+    },
+    {
+      "leaf_id": 19,
+      "area_pixels": 8009.5,
+      "perimeter_pixels": 366.49242079257965,
+      "centroid": [
+        54,
+        793
+      ],
+      "bounding_box": {
+        "x": 16,
+        "y": 726,
+        "width": 85,
+        "height": 131
+      },
+      "aspect_ratio": 0.648854961832061,
+      "circularity": 0.7493509709390951,
+      "confidence_score": 0.8906813263893127
+    },
+    {
+      "leaf_id": 20,
+      "area_pixels": 31620.0,
+      "perimeter_pixels": 887.7300099134445,
+      "centroid": [
+        996,
+        870
+      ],
+      "bounding_box": {
+        "x": 928,
+        "y": 714,
+        "width": 136,
+        "height": 329
+      },
+      "aspect_ratio": 0.4133738601823708,
+      "circularity": 0.504208225695855,
+      "confidence_score": 0.8877940773963928
+    },
+    {
+      "leaf_id": 21,
+      "area_pixels": 14171.0,
+      "perimeter_pixels": 584.4995605945587,
+      "centroid": [
+        573,
+        894
+      ],
+      "bounding_box": {
+        "x": 514,
+        "y": 794,
+        "width": 116,
+        "height": 195
+      },
+      "aspect_ratio": 0.5948717948717949,
+      "circularity": 0.5212450983785613,
+      "confidence_score": 0.8836090564727783
+    },
+    {
+      "leaf_id": 22,
+      "area_pixels": 4635.0,
+      "perimeter_pixels": 299.1370836496353,
+      "centroid": [
+        119,
+        32
+      ],
+      "bounding_box": {
+        "x": 76,
+        "y": 2,
+        "width": 105,
+        "height": 70
+      },
+      "aspect_ratio": 1.5,
+      "circularity": 0.6509072245330785,
+      "confidence_score": 0.8812708854675293
+    },
+    {
+      "leaf_id": 23,
+      "area_pixels": 9627.0,
+      "perimeter_pixels": 477.10259211063385,
+      "centroid": [
+        1098,
+        729
+      ],
+      "bounding_box": {
+        "x": 1037,
+        "y": 661,
+        "width": 127,
+        "height": 145
+      },
+      "aspect_ratio": 0.8758620689655172,
+      "circularity": 0.5314681996174717,
+      "confidence_score": 0.880773663520813
+    },
+    {
+      "leaf_id": 24,
+      "area_pixels": 4053.5,
+      "perimeter_pixels": 264.20815074443817,
+      "centroid": [
+        117,
+        994
+      ],
+      "bounding_box": {
+        "x": 81,
+        "y": 953,
+        "width": 75,
+        "height": 84
+      },
+      "aspect_ratio": 0.8928571428571429,
+      "circularity": 0.7297054983557544,
+      "confidence_score": 0.8775877952575684
+    },
+    {
+      "leaf_id": 25,
+      "area_pixels": 6833.0,
+      "perimeter_pixels": 405.3036028146744,
+      "centroid": [
+        146,
+        816
+      ],
+      "bounding_box": {
+        "x": 94,
+        "y": 746,
+        "width": 106,
+        "height": 137
+      },
+      "aspect_ratio": 0.7737226277372263,
+      "circularity": 0.5227094553708281,
+      "confidence_score": 0.8755872845649719
+    },
+    {
+      "leaf_id": 26,
+      "area_pixels": 8460.5,
+      "perimeter_pixels": 459.8893891572952,
+      "centroid": [
+        1152,
+        845
+      ],
+      "bounding_box": {
+        "x": 1085,
+        "y": 778,
+        "width": 126,
+        "height": 141
+      },
+      "aspect_ratio": 0.8936170212765957,
+      "circularity": 0.5026886910523045,
+      "confidence_score": 0.8671751022338867
+    },
+    {
+      "leaf_id": 27,
+      "area_pixels": 60524.5,
+      "perimeter_pixels": 1314.8397426605225,
+      "centroid": [
+        721,
+        233
+      ],
+      "bounding_box": {
+        "x": 558,
+        "y": 87,
+        "width": 323,
+        "height": 321
+      },
+      "aspect_ratio": 1.0062305295950156,
+      "circularity": 0.43994200425010555,
+      "confidence_score": 0.8662951588630676
+    },
+    {
+      "leaf_id": 28,
+      "area_pixels": 9790.0,
+      "perimeter_pixels": 407.76449942588806,
+      "centroid": [
+        564,
+        48
+      ],
+      "bounding_box": {
+        "x": 503,
+        "y": 1,
+        "width": 137,
+        "height": 92
+      },
+      "aspect_ratio": 1.4891304347826086,
+      "circularity": 0.7399011976117296,
+      "confidence_score": 0.853053629398346
+    },
+    {
+      "leaf_id": 29,
+      "area_pixels": 10362.5,
+      "perimeter_pixels": 478.8355665206909,
+      "centroid": [
+        1405,
+        248
+      ],
+      "bounding_box": {
+        "x": 1357,
+        "y": 170,
+        "width": 83,
+        "height": 183
+      },
+      "aspect_ratio": 0.453551912568306,
+      "circularity": 0.5679388862463024,
+      "confidence_score": 0.8499777317047119
+    },
+    {
+      "leaf_id": 30,
+      "area_pixels": 23175.0,
+      "perimeter_pixels": 822.3574258089066,
+      "centroid": [
+        438,
+        485
+      ],
+      "bounding_box": {
+        "x": 275,
+        "y": 433,
+        "width": 298,
+        "height": 118
+      },
+      "aspect_ratio": 2.5254237288135593,
+      "circularity": 0.43063405370707275,
+      "confidence_score": 0.8408666849136353
+    },
+    {
+      "leaf_id": 31,
+      "area_pixels": 7434.0,
+      "perimeter_pixels": 441.8233743906021,
+      "centroid": [
+        406,
+        344
+      ],
+      "bounding_box": {
+        "x": 300,
+        "y": 307,
+        "width": 176,
+        "height": 66
+      },
+      "aspect_ratio": 2.6666666666666665,
+      "circularity": 0.47855851091545804,
+      "confidence_score": 0.8406047224998474
+    },
+    {
+      "leaf_id": 32,
+      "area_pixels": 3412.0,
+      "perimeter_pixels": 239.53910386562347,
+      "centroid": [
+        1161,
+        1054
+      ],
+      "bounding_box": {
+        "x": 1119,
+        "y": 1026,
+        "width": 82,
+        "height": 52
+      },
+      "aspect_ratio": 1.5769230769230769,
+      "circularity": 0.7472502096047299,
+      "confidence_score": 0.8355922698974609
+    },
+    {
+      "leaf_id": 33,
+      "area_pixels": 29043.5,
+      "perimeter_pixels": 821.7716385126114,
+      "centroid": [
+        862,
+        108
+      ],
+      "bounding_box": {
+        "x": 777,
+        "y": 2,
+        "width": 160,
+        "height": 241
+      },
+      "aspect_ratio": 0.6639004149377593,
+      "circularity": 0.5404512410475311,
+      "confidence_score": 0.8331620693206787
+    },
+    {
+      "leaf_id": 34,
+      "area_pixels": 4829.5,
+      "perimeter_pixels": 336.81118190288544,
+      "centroid": [
+        1061,
+        20
+      ],
+      "bounding_box": {
+        "x": 989,
+        "y": 1,
+        "width": 138,
+        "height": 45
+      },
+      "aspect_ratio": 3.066666666666667,
+      "circularity": 0.5349818296713869,
+      "confidence_score": 0.8302563428878784
+    },
+    {
+      "leaf_id": 35,
+      "area_pixels": 10150.0,
+      "perimeter_pixels": 495.1025928258896,
+      "centroid": [
+        56,
+        648
+      ],
+      "bounding_box": {
+        "x": 1,
+        "y": 567,
+        "width": 118,
+        "height": 174
+      },
+      "aspect_ratio": 0.6781609195402298,
+      "circularity": 0.5203379538714197,
+      "confidence_score": 0.8272476196289062
+    },
+    {
+      "leaf_id": 36,
+      "area_pixels": 42380.5,
+      "perimeter_pixels": 1161.7615333795547,
+      "centroid": [
+        549,
+        291
+      ],
+      "bounding_box": {
+        "x": 464,
+        "y": 102,
+        "width": 182,
+        "height": 358
+      },
+      "aspect_ratio": 0.5083798882681564,
+      "circularity": 0.39458625676277026,
+      "confidence_score": 0.81693434715271
+    },
+    {
+      "leaf_id": 37,
+      "area_pixels": 13762.0,
+      "perimeter_pixels": 574.6173125505447,
+      "centroid": [
+        1048,
+        201
+      ],
+      "bounding_box": {
+        "x": 994,
+        "y": 91,
+        "width": 103,
+        "height": 210
+      },
+      "aspect_ratio": 0.49047619047619045,
+      "circularity": 0.5237620216712363,
+      "confidence_score": 0.8148244619369507
+    },
+    {
+      "leaf_id": 38,
+      "area_pixels": 6968.0,
+      "perimeter_pixels": 399.1370829343796,
+      "centroid": [
+        1026,
+        377
+      ],
+      "bounding_box": {
+        "x": 992,
+        "y": 307,
+        "width": 69,
+        "height": 153
+      },
+      "aspect_ratio": 0.45098039215686275,
+      "circularity": 0.5496343265067202,
+      "confidence_score": 0.8016992211341858
+    },
+    {
+      "leaf_id": 39,
+      "area_pixels": 8178.5,
+      "perimeter_pixels": 454.83556616306305,
+      "centroid": [
+        478,
+        575
+      ],
+      "bounding_box": {
+        "x": 384,
+        "y": 547,
+        "width": 177,
+        "height": 65
+      },
+      "aspect_ratio": 2.723076923076923,
+      "circularity": 0.4967921073323761,
+      "confidence_score": 0.7721312046051025
+    },
+    {
+      "leaf_id": 40,
+      "area_pixels": 2309.0,
+      "perimeter_pixels": 198.911687374115,
+      "centroid": [
+        83,
+        1060
+      ],
+      "bounding_box": {
+        "x": 45,
+        "y": 1038,
+        "width": 71,
+        "height": 41
+      },
+      "aspect_ratio": 1.7317073170731707,
+      "circularity": 0.7333532041922376,
+      "confidence_score": 0.7713456749916077
+    },
+    {
+      "leaf_id": 41,
+      "area_pixels": 20244.0,
+      "perimeter_pixels": 719.9554041624069,
+      "centroid": [
+        703,
+        468
+      ],
+      "bounding_box": {
+        "x": 580,
+        "y": 407,
+        "width": 263,
+        "height": 131
+      },
+      "aspect_ratio": 2.0076335877862594,
+      "circularity": 0.49078920379072266,
+      "confidence_score": 0.7656249403953552
+    },
+    {
+      "leaf_id": 42,
+      "area_pixels": 4403.5,
+      "perimeter_pixels": 334.9777022600174,
+      "centroid": [
+        31,
+        486
+      ],
+      "bounding_box": {
+        "x": 1,
+        "y": 409,
+        "width": 72,
+        "height": 130
+      },
+      "aspect_ratio": 0.5538461538461539,
+      "circularity": 0.49314662608291715,
+      "confidence_score": 0.743611216545105
+    },
+    {
+      "leaf_id": 43,
+      "area_pixels": 4584.5,
+      "perimeter_pixels": 394.669046998024,
+      "centroid": [
+        228,
+        1064
+      ],
+      "bounding_box": {
+        "x": 154,
+        "y": 1044,
+        "width": 173,
+        "height": 36
+      },
+      "aspect_ratio": 4.805555555555555,
+      "circularity": 0.36985858779561,
+      "confidence_score": 0.7419536709785461
+    },
+    {
+      "leaf_id": 44,
+      "area_pixels": 3056.0,
+      "perimeter_pixels": 232.99494767189026,
+      "centroid": [
+        1152,
+        629
+      ],
+      "bounding_box": {
+        "x": 1111,
+        "y": 598,
+        "width": 80,
+        "height": 59
+      },
+      "aspect_ratio": 1.3559322033898304,
+      "circularity": 0.7074083901168843,
+      "confidence_score": 0.7184788584709167
+    },
+    {
+      "leaf_id": 45,
+      "area_pixels": 12704.5,
+      "perimeter_pixels": 564.291411280632,
+      "centroid": [
+        905,
+        848
+      ],
+      "bounding_box": {
+        "x": 844,
+        "y": 748,
+        "width": 100,
+        "height": 200
+      },
+      "aspect_ratio": 0.5,
+      "circularity": 0.5013725597124116,
+      "confidence_score": 0.7109335660934448
+    }
+  ]
+}
