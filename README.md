@@ -14,8 +14,8 @@ A computer vision system for precise leaf instance segmentation, specifically de
                         │         │
                         v         v
 [Segmentation Head] ────┼── > [Bounding Boxes]
-          │            │
-          v            v
+          │             │
+          v             v
 [Instance Masks] [Confidence Scores]
           │            │
           └────┬───────┘
