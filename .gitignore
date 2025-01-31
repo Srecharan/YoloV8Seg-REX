@@ -38,7 +38,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
+yolov8_segmentation_rex.egg-info
 # Virtual environments
 .env
 .venv
