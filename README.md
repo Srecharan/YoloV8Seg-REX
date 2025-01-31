@@ -119,8 +119,8 @@ If you use this work in your research, please cite:
 ```bibtex
 @software{yolov8_leaf_segmentation_rex,
     title={YOLOv8 Leaf Segmentation for Robotic Applications},
-    author={Your Name},
+    author={Srecharan},
     year={2024},
-    url={https://github.com/yourusername/YoloV8Seg-REX}
+    url={https://github.com/Srecharan/YoloV8Seg-REX}
 }
 ```
