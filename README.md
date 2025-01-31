@@ -3,6 +3,29 @@
 ## Overview
 A computer vision system for precise leaf instance segmentation, specifically designed for the REX gantry robot. The system utilizes a custom-trained YOLOv8 model to provide accurate leaf detection and segmentation, enabling automated robotic grasping and manipulation tasks in agricultural settings.
 
+## System Architecture
+
+```
+[Stereo Camera] ──────────┐
+                          v
+[Image Preprocessing] ────┐
+                          v
+[YOLOv8 Model] ─────────┬── > [Detection Head]
+                        │         │
+                        v         v
+[Segmentation Head] ────┼── > [Bounding Boxes]
+          │            │
+          v            v
+[Instance Masks] [Confidence Scores]
+          │            │
+          └────┬───────┘
+               v
+    [Leaf Statistics Generation]
+               │
+               v
+     [Robot Control System]
+```
+
 ## Features
 - Real-time leaf instance segmentation
 - High-confidence detection (>0.90 average confidence)
