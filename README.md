@@ -26,6 +26,26 @@ A computer vision system for precise leaf instance segmentation, specifically de
      [Robot Control System]
 ```
 
+## Note on System Integration
+This system represents the semantic segmentation pipeline for the REX platform, integrating three key components:
+
+1. **YOLOv8 Segmentation Node (This Repository)**
+   - Real-time leaf instance segmentation
+   - High-precision mask generation
+   - Multi-leaf tracking capabilities
+
+2. **LeafGrasp-Vision-ML** ([LeafGrasp-Vision-ML](https://github.com/Srecharan/Leaf-Grasping-Vision-ML.git))
+   - Mask-based grasp point selection
+   - Instance-aware manipulation
+   - Real-time decision making
+
+3. **REX Robot Integration** ([REX-Robot](https://github.com/Srecharan/REX-Robot.git))
+   - High-resolution camera feed
+   - Synchronized image acquisition
+   - Environmental monitoring
+
+Each component has its dedicated repository for detailed implementation. This repository focuses on robust leaf detection and instance segmentation for precise plant manipulation.
+
 ## Features
 - Real-time leaf instance segmentation
 - High-confidence detection (>0.90 average confidence)
@@ -122,28 +142,9 @@ patience: 100
 ![Leaf Segmentation Example](examples/results/left_rect27_results.png)
 *Left: Original image, Center: Instance segmentation masks, Right: Visualization with confidence scores*
 
-## Applications
-- Automated leaf grasping in robotic systems
-- Plant monitoring and phenotyping
-- Agricultural automation
-- Research applications
-
 ## Pre-trained Weights
 Download the trained model weights from [Google Drive](https://drive.google.com/file/d/1IfbEu46vCMeQ-PtjwJ3RlUAobK5jPzQu/view?usp=drive_link)
 
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 [MIT License](LICENSE)
-
-## Citation
-If you use this work in your research, please cite:
-```bibtex
-@software{yolov8_leaf_segmentation_rex,
-    title={YOLOv8 Leaf Segmentation for Robotic Applications},
-    author={Srecharan},
-    year={2024},
-    url={https://github.com/Srecharan/YoloV8Seg-REX}
-}
-```
