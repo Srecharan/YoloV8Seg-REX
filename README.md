@@ -71,8 +71,8 @@ cd YoloV8Seg-REX
 conda env create -f environment.yml
 conda activate yolo-v8
 
-# Download pre-trained weights
-wget https://drive.google.com/file/d/1IfbEu46vCMeQ-PtjwJ3RlUAobK5jPzQu/view?usp=drive_link -O weights/large_best.pt
+## Pre-trained Weights
+The trained model weights used in this project are not publicly available. 
 ```
 
 ## Quick Start
