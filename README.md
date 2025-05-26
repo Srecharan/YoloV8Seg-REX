@@ -142,8 +142,8 @@ patience: 100
 ![Leaf Segmentation Example](examples/results/left_rect27_results.png)
 *Left: Original image, Center: Instance segmentation masks, Right: Visualization with confidence scores*
 
-## Pre-trained Weights
-Download the trained model weights from [Google Drive](https://drive.google.com/file/d/1IfbEu46vCMeQ-PtjwJ3RlUAobK5jPzQu/view?usp=drive_link)
+<!-- ## Pre-trained Weights
+Download the trained model weights from [Google Drive](https://drive.google.com/file/d/1IfbEu46vCMeQ-PtjwJ3RlUAobK5jPzQu/view?usp=drive_link) -->
 
 
 ## License
